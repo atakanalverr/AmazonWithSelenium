@@ -27,7 +27,7 @@ public class ConfigReader {
         return properties;
     }
     public static void waitBetweenOperations() {
-        WaitHelper.waitForSeconds(2);
+        WaitHelper.waitForSeconds(1);
     }
 
 }
