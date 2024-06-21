@@ -14,5 +14,4 @@ import org.openqa.selenium.WebDriver;
 
 public class Runner extends AbstractTestNGCucumberTests {
     static WebDriver driver = DriverFactory.getDriver();
-
 }
