@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class ProductsPage {
+
     private WebDriver driver;
     private ElementHelper elementHelper;
     private By filterAmazon = By.xpath("//span[contains(text(),'Amazon tarafından gönderilir')]");

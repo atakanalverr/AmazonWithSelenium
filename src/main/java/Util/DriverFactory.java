@@ -27,11 +27,9 @@ public class DriverFactory {
 
         return getDriver();
     }
-
     public static WebDriver getDriver() {
         return driver;
     }
-
 }
 
 /*

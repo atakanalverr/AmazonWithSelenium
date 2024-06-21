@@ -1,6 +1,7 @@
 package Util;
 
 public class WaitHelper {
+
     public static void waitForSeconds(int seconds) {
         try {
             Thread.sleep(seconds * 1000);

@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
+
     private WebDriver driver;
     private ElementHelper elementHelper;
     private By acceptCookie = By.id("sp-cc-accept");

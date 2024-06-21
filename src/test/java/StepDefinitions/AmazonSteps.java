@@ -5,8 +5,8 @@ import Pages.ProductsPage;
 import Pages.AddToCartPage;
 import Util.DriverFactory;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en.And;
 import org.openqa.selenium.WebDriver;
 
 public class AmazonSteps {
@@ -28,14 +28,19 @@ public class AmazonSteps {
         homePage.acceptCookies();
     }
 
-    @When("Arama inputuna tiklasin")
+    @When("Cerezleri kabul etsin")
+    public void clickAcceptCookies() {
+        homePage.acceptCookies();
+    }
+
+    @And("Arama inputuna tiklasin")
     public void clickTheSearchInput() {
         homePage.clickSearchInput();
     }
 
-    @And("Urun ismini yazsin {string}")
-    public void writeTheProductName(String productName) {
-        homePage.writeProduct(productName);
+    @And("Urun ismini yazsin")
+    public void writeTheProductName() {
+        homePage.writeProduct("AirPods"); // Ürün ismini buraya yazın veya parametre olarak alabilirsiniz
     }
 
     @And("Ara butonuna tiklasin")

@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AddToCartPage {
+
     private WebDriver driver;
     private ElementHelper elementHelper;
     private By addToCartButton = By.xpath("//input[@id='add-to-cart-button']");
