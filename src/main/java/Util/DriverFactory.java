@@ -27,9 +27,12 @@ public class DriverFactory {
 
         return getDriver();
     }
-
     public static WebDriver getDriver() {
         return driver;
     }
-
 }
+
+/*
+    DriverFactory class'ı, WebDriver'ı yapılandırmak ve kullanmak için gerekli olan paketleri içerir.
+    ConfigReader aracılığıyla yapılandırma ayarlarını alır ve bu ayarlara göre WebDriver'ı yapılandırır ve başlatır.
+ */
