@@ -33,3 +33,8 @@ public class DriverFactory {
     }
 
 }
+
+/*
+    DriverFactory class'ı, WebDriver'ı yapılandırmak ve kullanmak için gerekli olan paketleri içerir.
+    ConfigReader aracılığıyla yapılandırma ayarlarını alır ve bu ayarlara göre WebDriver'ı yapılandırır ve başlatır.
+ */

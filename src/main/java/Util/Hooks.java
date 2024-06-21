@@ -30,3 +30,9 @@ public class Hooks {
         driver.quit();
     }
 }
+
+/*
+    Hooks class'ı, Cucumber senaryoları için önemli işlemleri otomatik olarak yönetmek için kullanılır.
+    Cucumber senaryoları test adımlarını (steps) otomatik olarak bir araya getirir ve bu adımların öncesinde
+    veya sonrasında belirli işlemleri gerçekleştirmek amacıyla @Before ve @After gibi annotasyonları kullanır.
+*/
