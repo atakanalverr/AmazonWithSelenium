@@ -1,6 +1,7 @@
 package Util;
 
 public class WaitHelper {
+
     public static void waitForSeconds(int seconds) {
         try {
             Thread.sleep(seconds * 1000);
@@ -10,4 +11,7 @@ public class WaitHelper {
     }
 }
 
-//Bu class'ı; otomasyonun koştuğu her step'in arasına belirttiğim saniyeyi koyması için açtım.
+/*
+    WaitHelper class'ı, belirtilen süre kadar beklemek için kullanılan yardımcı bir sınıftır.
+    İşlevi oldukça basittir: verilen süre kadar (saniye cinsinden) beklemeyi sağlar.
+ */
