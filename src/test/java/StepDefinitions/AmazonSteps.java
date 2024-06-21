@@ -1,62 +1,70 @@
 package StepDefinitions;
 
-import Pages.AmazonPages;
+import Pages.HomePage;
+import Pages.ProductsPage;
+import Pages.AddToCartPage;
 import Util.DriverFactory;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 
 public class AmazonSteps {
-    WebDriver driver = DriverFactory.getDriver();
-    AmazonPages amazonPages = new AmazonPages(driver);
+    WebDriver driver;
+    HomePage homePage;
+    ProductsPage productsPage;
+    AddToCartPage addToCartPage;
+
+    public AmazonSteps() {
+        this.driver = DriverFactory.getDriver();
+        this.homePage = new HomePage(driver);
+        this.productsPage = new ProductsPage(driver);
+        this.addToCartPage = new AddToCartPage(driver);
+    }
+
     @Given("Kullanici anasayfaya gitsin")
     public void userIsOnHomepage() {
-        AmazonPages.HomePage();
+        driver.get("https://www.amazon.com"); // veya ana sayfa URL'nizi buraya yazın
+        homePage.acceptCookies();
     }
 
-    @When("Cerezleri kabul etsin")
-    public void clickAcceptCookies() {
-        AmazonPages.acceptCookie();
-    }
-
-    @And("Arama inputuna tiklasin")
+    @When("Arama inputuna tiklasin")
     public void clickTheSearchInput() {
-        AmazonPages.clickSearch();
+        homePage.clickSearchInput();
     }
 
-    @And("Urun ismini yazsin")
-    public void writeTheProductName() {
-        AmazonPages.writeProduct();
+    @And("Urun ismini yazsin {string}")
+    public void writeTheProductName(String productName) {
+        homePage.writeProduct(productName);
     }
 
     @And("Ara butonuna tiklasin")
     public void clickSearchButton() {
-        AmazonPages.searchButton();
+        homePage.clickSearchButton();
     }
 
     @And("Amazon tarafindan gonderilir filtresini secsin")
     public void filterForShippedByAmazon() {
-        AmazonPages.filterAmazon();
+        productsPage.filterAmazon();
     }
 
     @And("Markalar kismindan Apple filtresini secsin")
     public void filterForApple() {
-        AmazonPages.filterApple();
+        productsPage.filterApple();
     }
 
     @And("Karsisina gelen ilk urune tiklasin")
     public void clickTheFirstProduct() {
-        AmazonPages.firstProduct();
+        productsPage.clickFirstProduct();
     }
 
     @And("Sepete eklesin")
     public void addToCart() {
-        AmazonPages.addCart();
+        addToCartPage.addToCart();
     }
 
     @And("Sepete gitsin")
     public void checkAtCartPage() {
-        AmazonPages.checkCart();
+        addToCartPage.viewCart();
     }
 }
